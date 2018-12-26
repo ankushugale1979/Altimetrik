@@ -1,3 +1,0 @@
-FROM maven
-RUN mkdir -p /app
-COPY target/*.war /app
