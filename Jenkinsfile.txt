@@ -19,8 +19,7 @@ stages{
 	{
             steps 
 		{
-                    def customimage = docker.build(".")
-		    customimage.push()
+                    sh 'docker build .'
             	}            
         }        
         }
