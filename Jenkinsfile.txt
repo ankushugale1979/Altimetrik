@@ -18,9 +18,9 @@ stages{
 	{
             steps 
 		{
-                    def customimage = docker build -t myfirstimage:1 .
-		    docker.withRegistry('https://registry.hub.docker.com');
-		    customimage.push();
+                    sh 'def customimage = docker build -t myfirstimage:1 .'
+		    sh 'docker.withRegistry('https://registry.hub.docker.com')'
+		    sh 'customimage.push()'
             	}            
         }        
         }
