@@ -1,7 +1,6 @@
 pipeline {
     
     agent any
-    def customimage
    
 stages{
 	stage('Build'){
@@ -20,8 +19,8 @@ stages{
 	{
             steps 
 		{
-                    sh 'customimage = docker build .'
-		    sh 'customimage.push()'
+                    def customimage = docker.build(".")
+		    customimage.push()
             	}            
         }        
         }
