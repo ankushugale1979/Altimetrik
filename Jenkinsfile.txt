@@ -18,7 +18,7 @@ stages{
 	{
             steps 
 		{
-                    sh 'def customimage = docker build -t myfirstimage:1 .'
+                    sh 'def customimage = docker build .'
 		    sh 'customimage.push()'
             	}            
         }        
