@@ -1,5 +1,8 @@
 pipeline {
-    
+	environment {
+		registry = “ankushugale1979/docker-test”
+			registryCredential = ‘dockerhub’
+	}
     agent any
    
 stages{
@@ -20,7 +23,7 @@ stages{
             steps 
 		{
                     sh 'docker build -f Dockerfile -t ankushugale1979/altimetrik:simpleimage .'
-		    sh 'docker login --username=ankushugale1979 && docker push ankushugale1979/altimetrik'
+		    sh 'docker login -u ankushugale1979 -p ankcode#01 && docker push ankushugale1979/altimetrik'
             	}            
         }        
         }
