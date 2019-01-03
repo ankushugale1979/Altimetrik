@@ -20,7 +20,7 @@ stages{
             steps 
 		{
                     sh 'docker build -f Dockerfile -t ankushugale1979/altimetrik:simpleimage .'
-		    sh 'docker push ankushugale1979/altimetrik'
+		    sh 'docker login --username=ankushugale1979 && docker push ankushugale1979/altimetrik'
             	}            
         }        
         }
