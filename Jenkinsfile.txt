@@ -22,7 +22,7 @@ stages{
             steps 
 		{
                     sh 'docker build -f Dockerfile -t ankushugale1979/altimetrik:simpleimage .'
-		    sh 'docker login -u $USER_CREDENTIALS_USR -p USER_CREDENTIALS_PSW && docker push ankushugale1979/altimetrik'
+		    sh 'docker login -u $USER_CREDENTIALS_USR -p $USER_CREDENTIALS_PSW && docker push ankushugale1979/altimetrik'
             	}            
         }        
         }
